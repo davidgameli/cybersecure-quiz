@@ -1,18 +1,13 @@
-const questions = [
-  {
-    question: "What does 'phishing' mean in cybersecurity?",
-    options: ["A type of encryption", "A hacking technique", "A malware type", "A security protocol"],
-    answer: "A hacking technique"
-  },
-  {
-    question: "What is a strong password?",
-    options: ["123456", "yourname", "P@ssw0rd123!", "abcdefg"],
-    answer: "P@ssw0rd123!"
-  }
-];
-
+let questions = [];
 let currentQuestion = 0;
 let score = 0;
+
+fetch('questions.json')
+  .then(res => res.json())
+  .then(data => {
+    questions = data.sort(() => Math.random() - 0.5).slice(0, 10); // Show 10 random from the full set
+    showQuestion();
+  });
 
 const questionEl = document.getElementById('question');
 const optionsEl = document.getElementById('options');
@@ -23,7 +18,7 @@ function showQuestion() {
   const q = questions[currentQuestion];
   questionEl.textContent = q.question;
   optionsEl.innerHTML = '';
-  q.options.sort(() => Math.random() - 0.5); // shuffle options
+  q.options.sort(() => Math.random() - 0.5);
   q.options.forEach(option => {
     const li = document.createElement('li');
     li.textContent = option;
@@ -44,13 +39,10 @@ function checkAnswer(selected) {
 }
 
 function showScore() {
-  questionEl.textContent = "Quiz completed!";
+  questionEl.textContent = "Quiz Completed!";
   optionsEl.innerHTML = '';
   nextBtn.style.display = 'none';
-  scoreEl.textContent = `Your score: ${score} / ${questions.length}`;
+  scoreEl.textContent = `Your Score: ${score} / ${questions.length}`;
 }
 
 nextBtn.addEventListener('click', showQuestion);
-
-showQuestion();
-
