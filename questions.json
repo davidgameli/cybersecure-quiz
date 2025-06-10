@@ -1,1 +1,13 @@
+[
+  {
+    "question": "What does 'phishing' mean in cybersecurity?",
+    "options": ["A type of encryption", "A hacking technique", "A malware type", "A security protocol"],
+    "answer": "A hacking technique"
+  },
+  {
+    "question": "What is a strong password?",
+    "options": ["123456", "yourname", "P@ssw0rd123!", "abcdefg"],
+    "answer": "P@ssw0rd123!"
+  }
+]
 
