@@ -15,38 +15,13 @@
     "answer": "P@ssw0rd123!"
   },
   {
-    "question": "What does a firewall do?",
-    "options": ["Encrypts files", "Prevents unauthorized access", "Scans for viruses", "Backs up data"],
-    "answer": "Prevents unauthorized access"
-  },
-  {
-    "question": "What is malware?",
-    "options": ["Software updates", "Secure software", "Malicious software", "Data backup tool"],
-    "answer": "Malicious software"
-  },
-  {
     "question": "What does HTTPS indicate?",
     "options": ["Unsecured site", "Encrypted connection", "Open WiFi", "Proxy server"],
     "answer": "Encrypted connection"
   },
   {
-    "question": "Which protocol is used for secure web browsing?",
-    "options": ["FTP", "HTTP", "SMTP", "HTTPS"],
-    "answer": "HTTPS"
-  },
-  {
-    "question": "What is 2FA?",
-    "options": ["Two-Factor Authentication", "Two-Firewall Access", "Second File Access", "Two File Automation"],
-    "answer": "Two-Factor Authentication"
-  },
-  {
-    "question": "Which is an example of social engineering?",
-    "options": ["Antivirus", "Phishing email", "Encryption", "Firewall"],
-    "answer": "Phishing email"
-  },
-  {
-    "question": "A DDoS attack attempts to:",
-    "options": ["Delete system files", "Steal passwords", "Overwhelm servers", "Encrypt data"],
-    "answer": "Overwhelm servers"
+    "question": "What is malware?",
+    "options": ["Software updates", "Secure software", "Malicious software", "Data backup tool"],
+    "answer": "Malicious software"
   }
 ]
