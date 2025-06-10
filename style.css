@@ -77,3 +77,21 @@ ul#options li:hover {
   margin-top: 30px;
   color: #90ee90;
 }
+
+.correct {
+  background-color: #4caf50 !important; /* Green */
+  color: white;
+}
+
+.wrong {
+  background-color: #f44336 !important; /* Red */
+  color: white;
+}
+
+li.option {
+  pointer-events: auto;
+}
+
+li.option.disabled {
+  pointer-events: none;
+}
