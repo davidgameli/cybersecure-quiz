@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset & base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,37 +6,66 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f1c2e, #1c2b3a);
   color: #f5f5f5;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
+/* Main container */
 #quiz-container {
   background-color: #1e2a38;
   padding: 40px;
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
+/* Title */
 h1 {
   color: #29d;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
+/* Progress display */
+#progress {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Progress bar */
+.progress-bar-container {
+  width: 100%;
+  background-color: #ccc;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 10px;
+  width: 0%;
+  background-color: #29d;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Question */
 #question {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
   color: #e0e0e0;
 }
 
+/* Options */
 ul#options {
   list-style-type: none;
   padding: 0;
@@ -57,6 +86,26 @@ ul#options li:hover {
   transform: scale(1.02);
 }
 
+li.option {
+  pointer-events: auto;
+}
+
+li.option.disabled {
+  pointer-events: none;
+}
+
+/* Feedback */
+.correct {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.wrong {
+  background-color: #f44336 !important;
+  color: white;
+}
+
+/* Next Button */
 #next-btn {
   background-color: #29d;
   color: white;
@@ -66,32 +115,16 @@ ul#options li:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
+  display: none;
 }
 
 #next-btn:hover {
   background-color: #1b9bd7;
 }
 
+/* Score Display */
 #score {
   font-size: 1.3rem;
   margin-top: 30px;
   color: #90ee90;
-}
-
-.correct {
-  background-color: #4caf50 !important; /* Green */
-  color: white;
-}
-
-.wrong {
-  background-color: #f44336 !important; /* Red */
-  color: white;
-}
-
-li.option {
-  pointer-events: auto;
-}
-
-li.option.disabled {
-  pointer-events: none;
 }
