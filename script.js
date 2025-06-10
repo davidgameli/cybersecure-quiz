@@ -5,7 +5,7 @@ let score = 0;
 fetch('questions.json')
   .then(res => res.json())
   .then(data => {
-    questions = data.sort(() => Math.random() - 0.5).slice(0, 10); // Show 10 random from the full set
+    questions = data.sort(() => Math.random() - 0.5).slice(0, 10); // pick 10 random
     showQuestion();
   });
 
@@ -18,10 +18,9 @@ function showQuestion() {
   const q = questions[currentQuestion];
   questionEl.textContent = q.question;
   optionsEl.innerHTML = '';
-  nextBtn.style.display = 'none'; // hide until answer is picked
-  q.options.sort(() => Math.random() - 0.5);
+  nextBtn.style.display = 'none';
 
-  q.options.forEach(option => {
+  q.options.sort(() => Math.random() - 0.5).forEach(option => {
     const li = document.createElement('li');
     li.textContent = option;
     li.classList.add('option');
@@ -32,10 +31,10 @@ function showQuestion() {
 
 function checkAnswer(selectedEl, selectedOption) {
   const correct = questions[currentQuestion].answer;
-  const optionsList = document.querySelectorAll('#options li');
+  const optionEls = document.querySelectorAll('#options li');
 
-  optionsList.forEach(optionEl => {
-    optionEl.onclick = null; // disable all further clicks
+  optionEls.forEach(optionEl => {
+    optionEl.onclick = null;
     if (optionEl.textContent === correct) {
       optionEl.classList.add('correct');
     } else if (optionEl === selectedEl) {
@@ -47,6 +46,22 @@ function checkAnswer(selectedEl, selectedOption) {
     score++;
   }
 
-  nextBtn.style.display = 'inline-block'; // show next button
+  nextBtn.style.display = 'inline-block';
 }
 
+// ⬇️ THIS is what makes "Next" work
+nextBtn.addEventListener('click', () => {
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+});
+
+function showScore() {
+  questionEl.textContent = "Quiz Completed!";
+  optionsEl.innerHTML = '';
+  nextBtn.style.display = 'none';
+  scoreEl.textContent = `Your Score: ${score} / ${questions.length}`;
+}
