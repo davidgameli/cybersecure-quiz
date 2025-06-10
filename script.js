@@ -18,31 +18,35 @@ function showQuestion() {
   const q = questions[currentQuestion];
   questionEl.textContent = q.question;
   optionsEl.innerHTML = '';
+  nextBtn.style.display = 'none'; // hide until answer is picked
   q.options.sort(() => Math.random() - 0.5);
+
   q.options.forEach(option => {
     const li = document.createElement('li');
     li.textContent = option;
-    li.onclick = () => checkAnswer(option);
+    li.classList.add('option');
+    li.onclick = () => checkAnswer(li, option);
     optionsEl.appendChild(li);
   });
 }
 
-function checkAnswer(selected) {
+function checkAnswer(selectedEl, selectedOption) {
   const correct = questions[currentQuestion].answer;
-  if (selected === correct) score++;
-  currentQuestion++;
-  if (currentQuestion < questions.length) {
-    showQuestion();
-  } else {
-    showScore();
+  const optionsList = document.querySelectorAll('#options li');
+
+  optionsList.forEach(optionEl => {
+    optionEl.onclick = null; // disable all further clicks
+    if (optionEl.textContent === correct) {
+      optionEl.classList.add('correct');
+    } else if (optionEl === selectedEl) {
+      optionEl.classList.add('wrong');
+    }
+  });
+
+  if (selectedOption === correct) {
+    score++;
   }
+
+  nextBtn.style.display = 'inline-block'; // show next button
 }
 
-function showScore() {
-  questionEl.textContent = "Quiz Completed!";
-  optionsEl.innerHTML = '';
-  nextBtn.style.display = 'none';
-  scoreEl.textContent = `Your Score: ${score} / ${questions.length}`;
-}
-
-nextBtn.addEventListener('click', showQuestion);
