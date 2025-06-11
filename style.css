@@ -128,3 +128,12 @@ li.option.disabled {
   margin-top: 30px;
   color: #90ee90;
 }
+
+.review-item {
+  text-align: left;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+.review-item p {
+  margin: 4px 0;
+}
