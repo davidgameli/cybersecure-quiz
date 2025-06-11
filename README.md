@@ -19,3 +19,25 @@ Perfect for students, beginners, or anyone prepping for cybersecurity certificat
 1. Clone the repository:
    ```bash
    git clone https://github.com/davidgameli/cybersecure-quiz.git
+
+2. Open the index.html file in your browser to run the app locally.
+📌 Use Cases
+
+This app is great for:
+
+Cybersecurity self-assessments
+Classroom or workshop quizzes
+Entry-level interview prep
+Gamified learning sessions
+🙌 Contributing
+
+Contributions are welcome! Feel free to:
+
+Open issues for bugs or suggestions
+Submit pull requests to improve features or UI
+📄 License
+
+This project is licensed under the MIT License.
+
+💡 About the Developer
+Created by @davidgameli – passionate about tech, learning, and cybersecurity education.
