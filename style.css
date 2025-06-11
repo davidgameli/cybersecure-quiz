@@ -1,3 +1,10 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f1c2e, #1c2b3a);
@@ -9,6 +16,7 @@ body {
   padding: 20px;
 }
 
+/* Main container */
 #quiz-container {
   background-color: #1e2a38;
   padding: 40px;
@@ -19,18 +27,21 @@ body {
   text-align: center;
 }
 
+/* Title */
 h1 {
   color: #29d;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
+/* Progress display */
 #progress {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #ccc;
 }
 
+/* Progress bar */
 .progress-bar-container {
   width: 100%;
   background-color: #ccc;
@@ -47,12 +58,14 @@ h1 {
   transition: width 0.3s ease-in-out;
 }
 
+/* Question */
 #question {
   font-size: 1.3rem;
   margin-bottom: 20px;
   color: #e0e0e0;
 }
 
+/* Options */
 ul#options {
   list-style-type: none;
   padding: 0;
@@ -81,6 +94,7 @@ li.option.disabled {
   pointer-events: none;
 }
 
+/* Feedback */
 .correct {
   background-color: #4caf50 !important;
   color: white;
@@ -91,6 +105,7 @@ li.option.disabled {
   color: white;
 }
 
+/* Next Button */
 #next-btn {
   background-color: #29d;
   color: white;
@@ -107,18 +122,9 @@ li.option.disabled {
   background-color: #1b9bd7;
 }
 
+/* Score Display */
 #score {
   font-size: 1.3rem;
   margin-top: 30px;
   color: #90ee90;
-}
-
-.review-item {
-  text-align: left;
-  margin-top: 15px;
-  font-size: 0.95rem;
-}
-
-.review-item p {
-  margin: 4px 0;
 }
