@@ -6,7 +6,7 @@ let incorrectAnswers = [];
 fetch('questions.json')
   .then(res => res.json())
   .then(data => {
-    questions = data.sort(() => Math.random() - 0.5).slice(0, 5); // Select 5 random questions
+    questions = data.sort(() => Math.random() - 0.5).slice(0, 5); // pick 5 from 10+
     showQuestion();
   });
 
