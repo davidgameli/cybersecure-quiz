@@ -1,11 +1,12 @@
 let questions = [];
 let currentQuestion = 0;
 let score = 0;
+let incorrectAnswers = [];
 
 fetch('questions.json')
   .then(res => res.json())
   .then(data => {
-    questions = data.sort(() => Math.random() - 0.5).slice(0, 10); // Use 10 random questions
+    questions = data.sort(() => Math.random() - 0.5).slice(0, 5); // Select 5 random questions
     showQuestion();
   });
 
@@ -39,7 +40,7 @@ function checkAnswer(selectedEl, selectedOption) {
   const optionEls = document.querySelectorAll('#options li');
 
   optionEls.forEach(optionEl => {
-    optionEl.onclick = null; // disable more clicks
+    optionEl.onclick = null;
     if (optionEl.textContent === correct) {
       optionEl.classList.add('correct');
     } else if (optionEl === selectedEl) {
@@ -49,6 +50,12 @@ function checkAnswer(selectedEl, selectedOption) {
 
   if (selectedOption === correct) {
     score++;
+  } else {
+    incorrectAnswers.push({
+      question: questions[currentQuestion].question,
+      correctAnswer: correct,
+      yourAnswer: selectedOption
+    });
   }
 
   nextBtn.style.display = 'inline-block';
@@ -69,5 +76,23 @@ function showScore() {
   nextBtn.style.display = 'none';
   progressEl.textContent = '';
   progressBar.style.width = '100%';
-  scoreEl.textContent = `Your Score: ${score} / ${questions.length}`;
+  scoreEl.innerHTML = `Your Score: ${score} / ${questions.length}`;
+
+  if (incorrectAnswers.length > 0) {
+    const reviewTitle = document.createElement('h3');
+    reviewTitle.textContent = 'Review Incorrect Answers:';
+    scoreEl.appendChild(reviewTitle);
+
+    incorrectAnswers.forEach(item => {
+      const reviewItem = document.createElement('div');
+      reviewItem.classList.add('review-item');
+      reviewItem.innerHTML = `
+        <p><strong>Q:</strong> ${item.question}</p>
+        <p><strong>Your answer:</strong> <span style="color: #f44336">${item.yourAnswer}</span></p>
+        <p><strong>Correct answer:</strong> <span style="color: #4caf50">${item.correctAnswer}</span></p>
+        <hr>
+      `;
+      scoreEl.appendChild(reviewItem);
+    });
+  }
 }
