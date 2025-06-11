@@ -153,7 +153,7 @@
     "question": "What are common challenges faced by cybersecurity professionals today?",
     "options": ["Keeping up with rapidly evolving threats, managing the increasing complexity of networks, addressing vulnerabilities in new technologies", "Lack of internet access", "Lack of interest in cybersecurity", "Lack of data"],
     "answer": "Keeping up with rapidly evolving threats, managing the increasing complexity of networks, addressing vulnerabilities in new technologies"
-  },
+  }
+]
 
-::contentReference[oaicite:0]{index=0}
  
