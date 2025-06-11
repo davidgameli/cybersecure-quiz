@@ -5,23 +5,155 @@
     "answer": "Virtual Private Network"
   },
   {
-    "question": "What kind of attack involves tricking users into giving up personal information?",
-    "options": ["Phishing", "Brute Force", "DDoS", "Backdoor"],
+    "question": "What is phishing?",
+    "options": ["A type of fish", "A cyber attack aiming to steal sensitive data", "A new internet trend", "A method to secure passwords"],
+    "answer": "A cyber attack aiming to steal sensitive data"
+  },
+  {
+    "question": "Which tool is commonly used for network scanning?",
+    "options": ["Nmap", "Wireshark", "Metasploit", "Burp Suite"],
+    "answer": "Nmap"
+  },
+  {
+    "question": "What is a zero-day vulnerability?",
+    "options": ["A vulnerability that has been patched", "A vulnerability that is unknown to the software vendor", "A vulnerability that is publicly known", "A vulnerability that is easy to exploit"],
+    "answer": "A vulnerability that is unknown to the software vendor"
+  },
+  {
+    "question": "What is the purpose of penetration testing?",
+    "options": ["To simulate a cyber attack to identify vulnerabilities", "To monitor network traffic", "To encrypt data", "To install security patches"],
+    "answer": "To simulate a cyber attack to identify vulnerabilities"
+  },
+  {
+    "question": "Which of the following is a social engineering technique?",
+    "options": ["Phishing", "Brute-force attack", "SQL injection", "Man-in-the-middle attack"],
     "answer": "Phishing"
   },
   {
-    "question": "Which one is a strong password?",
-    "options": ["123456", "qwerty", "P@ssw0rd123!", "abcdef"],
-    "answer": "P@ssw0rd123!"
-  },
-  {
-    "question": "What does HTTPS indicate?",
-    "options": ["Unsecured site", "Encrypted connection", "Open WiFi", "Proxy server"],
-    "answer": "Encrypted connection"
+    "question": "What is the difference between black-hat and white-hat hackers?",
+    "options": ["Black-hat hackers work legally; white-hat hackers work illegally", "Black-hat hackers exploit vulnerabilities for personal gain; white-hat hackers help fix vulnerabilities", "Black-hat hackers are government agents; white-hat hackers are private citizens", "There is no difference"],
+    "answer": "Black-hat hackers exploit vulnerabilities for personal gain; white-hat hackers help fix vulnerabilities"
   },
   {
     "question": "What is malware?",
-    "options": ["Software updates", "Secure software", "Malicious software", "Data backup tool"],
-    "answer": "Malicious software"
-  }
-]
+    "options": ["Software designed to protect systems", "Malicious software designed to harm or exploit systems", "Software that speeds up systems", "Software that monitors system performance"],
+    "answer": "Malicious software designed to harm or exploit systems"
+  },
+  {
+    "question": "What is SQL injection?",
+    "options": ["A method to secure databases", "A technique to inject malicious SQL queries into input fields", "A process to optimize database performance", "A way to encrypt database data"],
+    "answer": "A technique to inject malicious SQL queries into input fields"
+  },
+  {
+    "question": "Which protocol is commonly used for secure communication over the internet?",
+    "options": ["HTTP", "FTP", "SSH", "Telnet"],
+    "answer": "SSH"
+  },
+  {
+    "question": "What is the CIA triad in cybersecurity?",
+    "options": ["Confidentiality, Integrity, Availability", "Confidentiality, Information, Authentication", "Control, Integrity, Availability", "Control, Information, Authentication"],
+    "answer": "Confidentiality, Integrity, Availability"
+  },
+  {
+    "question": "What is a firewall?",
+    "options": ["A wall that is on fire", "A security system that monitors and controls incoming and outgoing network traffic", "A new game from a famous developer", "A type of malware"],
+    "answer": "A security system that monitors and controls incoming and outgoing network traffic"
+  },
+  {
+    "question": "What is the purpose of encryption in cybersecurity?",
+    "options": ["To protect data by converting it into a secure format", "To speed up data transmission", "To monitor network traffic", "To store data securely"],
+    "answer": "To protect data by converting it into a secure format"
+  },
+  {
+    "question": "What is a VPN and how does it work?",
+    "options": ["A Virtual Private Network that encrypts internet traffic", "A Virtual Public Network that speeds up internet connection", "A Virtual Private Network that monitors network traffic", "A Virtual Public Network that stores data securely"],
+    "answer": "A Virtual Private Network that encrypts internet traffic"
+  },
+  {
+    "question": "What is the OWASP Top 10?",
+    "options": ["A list of the ten most critical web application security risks", "A list of the top ten programming languages", "A list of the top ten cybersecurity certifications", "A list of the top ten cybersecurity companies"],
+    "answer": "A list of the ten most critical web application security risks"
+  },
+  {
+    "question": "What is the difference between symmetric and asymmetric encryption?",
+    "options": ["Symmetric encryption uses a single key for both encryption and decryption; asymmetric encryption uses a pair of keys", "Symmetric encryption uses two keys; asymmetric encryption uses a single key", "Symmetric encryption is slower than asymmetric encryption", "There is no difference"],
+    "answer": "Symmetric encryption uses a single key for both encryption and decryption; asymmetric encryption uses a pair of keys"
+  },
+  {
+    "question": "What is a denial-of-service (DoS) attack?",
+    "options": ["A type of malware", "A network attack that aims to overload a system and make it inaccessible", "A social engineering tactic", "A method of encrypting data"],
+    "answer": "A network attack that aims to overload a system and make it inaccessible"
+  },
+  {
+    "question": "What is a honeypot?",
+    "options": ["A type of malware", "A decoy system designed to attract attackers", "A social engineering tactic", "A method of encrypting data"],
+    "answer": "A decoy system designed to attract attackers"
+  },
+  {
+    "question": "Which of the following is a common cybersecurity certification?",
+    "options": ["Certified Information Systems Security Professional (CISSP)", "Certified Ethical Hacker (CEH)", "Certified Information Security Manager (CISM)", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the purpose of a security incident response plan (SIRP)?",
+    "options": ["To provide a structured approach to responding to security incidents", "To prevent security incidents from occurring", "To detect malware", "To encrypt data"],
+    "answer": "To provide a structured approach to responding to security incidents"
+  },
+  {
+    "question": "Which of the following is a common cybersecurity framework?",
+    "options": ["NIST Cybersecurity Framework", "ISO 27001", "CIS Controls", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is a vulnerability?",
+    "options": ["A weakness in a system that can be exploited", "A security threat", "A security control", "A security incident"],
+    "answer": "A weakness in a system that can be exploited"
+  },
+  {
+    "question": "What is the purpose of a security audit?",
+    "options": ["To identify vulnerabilities in a system", "To prevent data loss", "To detect viruses", "To encrypt data"],
+    "answer": "To identify vulnerabilities in a system"
+  },
+  {
+    "question": "What is the purpose of a security policy?",
+    "options": ["To define the organization’s security goals and guidelines", "To prevent data loss", "To detect viruses", "To encrypt data"],
+    "answer": "To define the organization’s security goals and guidelines"
+  },
+  {
+    "question": "What is the role of a security awareness training program?",
+    "options": ["To educate employees about security best practices", "To prevent data loss", "To detect viruses", "To encrypt data"],
+    "answer": "To educate employees about security best practices"
+  },
+  {
+    "question": "What is the principle of least privilege?",
+    "options": ["Granting users only the access permissions necessary to perform their job functions", "Granting users full access to all resources", "Granting users access based on their job title", "Granting users access based on their seniority"],
+    "answer": "Granting users only the access permissions necessary to perform their job functions"
+  },
+  {
+    "question": "Why is regular software updating important?",
+    "options": ["Regular updates often contain patches that fix vulnerabilities", "Regular updates slow down the system", "Regular updates are not necessary", "Regular updates are only for new features"],
+    "answer": "Regular updates often contain patches that fix vulnerabilities"
+  },
+  {
+    "question": "What is the Internet of Things (IoT), and how does it impact cybersecurity?",
+    "options": ["The IoT refers to the network of physical objects that connect to the internet and share data; it expands the attack surface for cybercriminals", "The IoT refers to a new type of malware; it enhances cybersecurity", "The IoT refers to a cybersecurity certification; it standardizes security practices", "The IoT refers to a security protocol; it secures internet traffic"],
+    "answer": "The IoT refers to the network of physical objects that connect to the internet and share data; it expands the attack surface for cybercriminals"
+  },
+  {
+    "question": "What are advanced persistent threats (APTs)?",
+    "options": ["Prolonged and targeted cyber attacks where an intruder gains access to a network and remains undetected", "Short-term cyber attacks that cause immediate damage", "Cyber attacks that are easily detected and mitigated", "Cyber attacks that are only theoretical"],
+    "answer": "Prolonged and targeted cyber attacks where an intruder gains access to a network and remains undetected"
+  },
+  {
+    "question": "What role does artificial intelligence (AI) play in cybersecurity?",
+    "options": ["AI enhances cybersecurity by automating threat detection and response", "AI weakens cybersecurity by introducing new vulnerabilities", "AI has no role in cybersecurity", "AI is used to develop malware"],
+    "answer": "AI enhances cybersecurity by automating threat detection and response"
+  },
+  {
+    "question": "What are common challenges faced by cybersecurity professionals today?",
+    "options": ["Keeping up with rapidly evolving threats, managing the increasing complexity of networks, addressing vulnerabilities in new technologies", "Lack of internet access", "Lack of interest in cybersecurity", "Lack of data"],
+    "answer": "Keeping up with rapidly evolving threats, managing the increasing complexity of networks, addressing vulnerabilities in new technologies"
+  },
+
+::contentReference[oaicite:0]{index=0}
+ 
